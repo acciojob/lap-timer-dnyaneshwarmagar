@@ -47,7 +47,7 @@ const App = () => {
   };
 
   return (
-    <div className="app" id="root">
+    <div id="root">
       <h1 className="timer">{!!formatTime(time)?formatTime(time):"00:00:00"}</h1>
       <div className="buttons">
         {!isRunning ? (
