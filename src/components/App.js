@@ -43,7 +43,7 @@ const App = () => {
     const centiseconds = Math.floor((time % 1000) / 10);
 
     const formatNumber = (num) => num.toString().padStart(2, '0');
-    return `${formatNumber(minutes)}:${formatNumber(seconds)}.${formatNumber(centiseconds)}`;
+    return `${formatNumber(minutes)}:${formatNumber(seconds)}:${formatNumber(centiseconds)}`;
   };
 
   return (
