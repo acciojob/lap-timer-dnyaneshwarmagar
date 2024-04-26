@@ -47,14 +47,14 @@ const App = () => {
   };
 
   return (
-    <div id="root">
-      <h1 className="timer">{!!formatTime(time)?formatTime(time):"00:00:00"}</h1>
+    <div className="app">
+      <h1 className="timer">{formatTime(time)}</h1>
       <div className="buttons">
-        {!isRunning ? (
-          <button onClick={startTimer}>Start</button>
-        ) : (
-          <button onClick={stopTimer}>Stop</button>
-        )}
+      
+          <button onClick={startTimer} disabled={isRunning}>Start</button>
+     
+          <button onClick={stopTimer} disabled={!isRunning}>Stop</button>
+   
         <button onClick={isRunning ? recordLap : null} disabled={!isRunning}>
           Lap
         </button>
